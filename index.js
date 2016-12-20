@@ -92,7 +92,7 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
           this.div.style.cssText = `
             background:
-              url('https://media.giphy.com/media/l0NwFpmhycSR8hYdi/200.gif');
+              url('https://media.giphy.com/media/${data[gif].id}/200.gif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
