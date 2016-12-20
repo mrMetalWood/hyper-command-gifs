@@ -1,7 +1,7 @@
 {
   "name": "hyper-command-gifs",
   "version": "0.0.1",
-  "description": "Hyper Command Gifs",
+  "description": "Plugin for Hyper™ terminal. Enhances your daily terminal routine with gifs as you type your commands",
   "main": "index.js",
   "scripts": {
     "prepare": "rm -rf ~/.hyper_plugins/local/hyper-command-gifs/* && mkdir -p ~/.hyper_plugins/local/hyper-command-gifs && npm run copy",
