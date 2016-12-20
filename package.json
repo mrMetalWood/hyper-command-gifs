@@ -13,7 +13,10 @@
     "url": "git+https://github.com/mrMetalWood/hyper-command-gifs.git"
   },
   "keywords": [
-    "hyper"
+    "hyper",
+    "gif",
+    "terminal",
+    "commands"
   ],
   "author": "Malte Modrow",
   "license": "MIT",
