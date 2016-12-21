@@ -4,9 +4,13 @@ Plugin for Hyper™ terminal.
 
 Enhances your daily terminal routine with gifs. Because why not.
 
-Currently the plugin only matches for `push` (e.g. `git push`), but more are soon to follow.
+Currently the plugin matches for the following keywords in your commands:
 
-The plugin calls the Giphy API when a keyword is matched at the moment. Probably gonna switch to a curated list in the future since the not all commands work as well as `push`.
+- push
+- pull
+- start
+
+More to come in the next few days!
 
 ![Demo of Plugin using git push command](example/git-push-demo.gif)
 

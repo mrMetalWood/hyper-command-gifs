@@ -1,4 +1,5 @@
-const commandMatches = /push/;
+const commands = require('./gifs.js').commands;
+const gifs = require('./gifs.js').gifs;
 
 exports.middleware = (store) => (next) => (action) => {
   if ('SESSION_ADD_DATA' === action.type) {
@@ -77,31 +78,23 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
 
     showGif() {
-      const match = commandMatches.exec(this.props.query);
+      const match = commands.exec(this.props.query);
 
       if (match && !this.state.gifInProgress) {
+        const gifCategory = gifs[match[0]]
+        const gifCount = gifCategory.length - 1;
+        const gif = Math.floor(Math.random() * (gifCount + 1));
 
-        fetch(
-          `http://api.giphy.com/v1/gifs/search?q=${match[0]}&api_key=dc6zaTOxFJmzC`
-        )
-        .then(response => response.json())
-        .then(gifs => {
-          const {data} = gifs;
-          const gifCount = data.length - 1;
-          const gif = Math.floor(Math.random() * (gifCount - 0 + 1));
+        this.div.style.cssText = `
+          background: url('${gifCategory[gif]}');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        `;
 
-          this.div.style.cssText = `
-            background:
-              url('https://media.giphy.com/media/${data[gif].id}/200.gif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          `;
+        this.setState({gifInProgress: true})
 
-          this.setState({gifInProgress: true})
-
-          setTimeout(() => this.clearGif(), 5000)
-        });
+        setTimeout(() => this.clearGif(), 5000)
       }
     }
 

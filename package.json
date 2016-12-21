@@ -1,12 +1,12 @@
 {
   "name": "hyper-command-gifs",
   "version": "0.0.1",
-  "description": "Plugin for Hyper™ terminal. Enhances your daily terminal routine with gifs as you type your commands",
+  "description": "Hyper™ plugin. Gives you awesome gifs for you terminal commands",
   "main": "index.js",
   "scripts": {
     "prepare": "rm -rf ~/.hyper_plugins/local/hyper-command-gifs/* && mkdir -p ~/.hyper_plugins/local/hyper-command-gifs && npm run copy",
-    "copy": "cp index.js ~/.hyper_plugins/local/hyper-command-gifs",
-    "start": "npm run prepare && watch -p 'index.js' -c 'npm run copy'"
+    "copy": "cp *.js ~/.hyper_plugins/local/hyper-command-gifs",
+    "start": "npm run prepare && watch -p '*.js' -c 'npm run copy'"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,6 @@
   },
   "homepage": "https://github.com/mrMetalWood/hyper-command-gifs#readme",
   "devDependencies": {
+    "watch-cli": "^0.2.1"
   }
 }
