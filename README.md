@@ -1,8 +1,8 @@
-# Hyper Command Gifs
+# Hyper Command GIFs
 
 Plugin for Hyper™ terminal.
 
-Enhances your daily terminal routine with gifs. Because why not.
+Enhances your daily terminal routine with GIFs. Because why not.
 
 Currently the plugin matches for the following keywords in your commands:
 

@@ -1,7 +1,7 @@
 {
   "name": "hyper-command-gifs",
   "version": "0.0.2",
-  "description": "Hyper™ plugin. Gives you awesome gifs for you terminal commands",
+  "description": "Hyper™ plugin. Gives you matching GIFs for your terminal commands",
   "main": "index.js",
   "scripts": {
     "prepare": "rm -rf ~/.hyper_plugins/local/hyper-command-gifs/* && mkdir -p ~/.hyper_plugins/local/hyper-command-gifs && npm run copy",
