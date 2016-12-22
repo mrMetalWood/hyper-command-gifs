@@ -6,9 +6,11 @@ Enhances your daily terminal routine with GIFs. Because why not.
 
 Currently the plugin matches for the following keywords in your commands:
 
-- push
+- checkout
 - pull
+- push
 - start
+- test
 
 More to come in the next few days!
 
