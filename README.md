@@ -28,3 +28,23 @@ plugins: [
   'hyper-command-gifs'
 ]
 ```
+
+## Config
+
+To configure the plugin simply add a `hyperCommandGifs` property to the config object in `~/.hyper.js`.
+The only option right now is to disable certain commands to prevent them from matching and showing GIFs.
+
+Let's say you are switching branches like a maniac and hitting `npm test` every 5 seconds, then just disable them like this:
+
+```javascript
+module.exports = {
+  config: {
+    // ...all the other default options
+
+
+    hyperCommandGifs: {
+      disabledCommands: ['checkout', 'test']
+    }
+  }
+}
+```

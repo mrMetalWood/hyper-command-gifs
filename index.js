@@ -66,6 +66,10 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
       this.onTerminal = this.onTerminal.bind(this);
 
+      const defaultConfig = {disabledCommands: []}
+      const userConfig = config.getConfig().hyperCommandGifs || {};
+
+      this.config = Object.assign({}, defaultConfig, userConfig);
     }
 
     shouldComponentUpdate(nextProps) {
@@ -80,7 +84,11 @@ exports.decorateTerm = (Term, { React, notify }) => {
     showGif() {
       const match = commands.exec(this.props.query);
 
-      if (match && !this.state.gifInProgress) {
+      if (
+        match &&
+        this.config.disabledCommands.indexOf(match[0]) === -1 &&
+        !this.state.gifInProgress
+      ) {
         const gifCategory = gifs[match[0]]
         const gifCount = gifCategory.length - 1;
         const gif = Math.floor(Math.random() * (gifCount + 1));
