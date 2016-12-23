@@ -6,7 +6,9 @@ Enhances your daily terminal routine with GIFs. Because why not.
 
 Currently the plugin matches for the following keywords in your commands:
 
+- build
 - checkout
+- deploy
 - pull
 - push
 - start

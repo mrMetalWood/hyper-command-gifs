@@ -1,4 +1,4 @@
-exports.commands = /push|pull|start|checkout|test/;
+exports.commands = /push|pull|start|checkout|test|build|deploy/;
 
 exports.gifs = {
   push: [
@@ -36,5 +36,19 @@ exports.gifs = {
     'https://media.giphy.com/media/l0NwNrl4BtDD7JCx2/200.gif',
     'https://media.giphy.com/media/3osxY5DBiplbJ47i4o/giphy.gif',
     'https://media.giphy.com/media/UmAog71iKAuSQ/giphy.gif'
+  ],
+  build: [
+    'https://media.giphy.com/media/xTiTntfYqy2yIOowla/giphy.gif',
+    'https://media.giphy.com/media/V1PdNGhBApR8A/200.gif',
+    'https://media.giphy.com/media/Rm1p7xp3Odl2o/giphy.gif',
+    'https://media.giphy.com/media/3o6MbnfLBGvNY6HwGc/giphy.gif',
+    'https://media.giphy.com/media/L9pjsBKjNKrXa/giphy.gif'
+  ],
+  deploy: [
+    'https://media.giphy.com/media/Ri4QEfPRSElwI/giphy.gif',
+    'https://media.giphy.com/media/mwivo5YUoEzba/giphy.gif',
+    'https://media.giphy.com/media/xTiTnFkTdVQdg8j7vW/giphy.gif',
+    'https://media.giphy.com/media/d6WWh3Em7kWHu/giphy.gif',
+    'https://media.giphy.com/media/MPni0kbb7Eh8Y/giphy.gif'
   ]
 }
