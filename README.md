@@ -48,3 +48,18 @@ module.exports = {
   }
 }
 ```
+
+If you think the gifs are too long and want to see you changes when running git status you can change the duration like this:
+
+```javascript
+module.exports = {
+  config: {
+    // ...all the other default options
+
+
+    hyperCommandGifs: {
+      timeout: 200
+    }
+  }
+}
+```
