@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "rm -rf ~/.hyper_plugins/local/hyper-command-gifs/* && mkdir -p ~/.hyper_plugins/local/hyper-command-gifs && npm run copy",
     "copy": "cp *.js ~/.hyper_plugins/local/hyper-command-gifs",
-    "start": "npm run prepare && watch -p '*.js' -c 'npm run copy'"
+    "start": "npm run lint && npm run prepare && watch -p '*.js' -c 'npm run copy'",
+    "lint": "eslint index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
   },
   "homepage": "https://github.com/mrMetalWood/hyper-command-gifs#readme",
   "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-plugin-react": "^6.10.0",
     "watch-cli": "^0.2.1"
   }
 }
