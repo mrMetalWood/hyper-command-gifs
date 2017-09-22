@@ -1,4 +1,4 @@
-# Hyper Command GIFs
+# Fork from Hyper Command GIFs
 
 Plugin for Hyper™ terminal.
 
@@ -13,6 +13,8 @@ Currently the plugin matches for the following keywords in your commands:
 - push
 - start
 - test
+- install
+- clone
 
 More to come in the next few days!
 
