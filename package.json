@@ -1,7 +1,7 @@
 {
-  "name": "hyper-command-gifs",
-  "version": "0.0.6",
-  "description": "Hyper™ plugin. Gives you matching GIFs for your terminal commands",
+  "name": "hyper-command-gifs-naay",
+  "version": "2.0.8",
+  "description": "Hyper™ plugin. Gives you matching GIFs for your terminal commands fork from original plugin 'hyper-command-gifs'",
   "main": "index.js",
   "scripts": {
     "prepare": "rm -rf ~/.hyper_plugins/local/hyper-command-gifs/* && mkdir -p ~/.hyper_plugins/local/hyper-command-gifs && npm run copy",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrMetalWood/hyper-command-gifs.git"
+    "url": "git+https://github.com/launay12u/hyper-command-gifs.git"
   },
   "keywords": [
     "hyper",
@@ -18,12 +18,12 @@
     "terminal",
     "commands"
   ],
-  "author": "Malte Modrow",
+  "author": "Launay Guillaume",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrMetalWood/hyper-command-gifs/issues"
+    "url": "https://github.com/launay12u/hyper-command-gifs/issues"
   },
-  "homepage": "https://github.com/mrMetalWood/hyper-command-gifs#readme",
+  "homepage": "https://github.com/launay12u/hyper-command-gifs#readme",
   "devDependencies": {
     "watch-cli": "^0.2.1"
   }

@@ -57,6 +57,10 @@ exports.getTermProps = (uid, parentProps, props) => {
   });
 }
 
+exports.onWindow = (windows ) => {
+  console.log('ceci est un test');
+}
+
 exports.decorateTerm = (Term, { React, notify }) => {
   return class extends React.Component {
     constructor (props, context) {
@@ -66,7 +70,7 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
       this.onTerminal = this.onTerminal.bind(this);
 
-      const defaultConfig = {disabledCommands: []}
+      const defaultConfig = {disabledCommands: [], gifTimeout : 3000, gifHello : true}
       const userConfig = config.getConfig().hyperCommandGifs || {};
 
       this.config = Object.assign({}, defaultConfig, userConfig);
@@ -80,6 +84,30 @@ exports.decorateTerm = (Term, { React, notify }) => {
       return false;
     }
 
+    helloGif(){
+
+      if (
+          this.config.gifHello
+      ){
+          const gifCategory = gifs['hello']
+          const gifCount = gifCategory.length - 1;
+          const gif = Math.floor(Math.random() * (gifCount + 1));
+
+          this.div.style.cssText = `
+          background: url('${gifCategory[gif]}');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        `;
+
+          this.setState({gifInProgress: true})
+
+          const gifTimeout = this.config.gifTimeout;
+
+          setTimeout(() => this.clearGif(), gifTimeout)
+      }
+
+    }
 
     showGif() {
       const match = commands.exec(this.props.query);
@@ -102,7 +130,9 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
         this.setState({gifInProgress: true})
 
-        setTimeout(() => this.clearGif(), 5000)
+        const gifTimeout = this.config.gifTimeout;
+
+        setTimeout(() => this.clearGif(), gifTimeout)
       }
     }
 
@@ -113,11 +143,12 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
     onTerminal(term) {
       this.div = term.div_;
-
+      this.helloGif();
       term.document_.addEventListener(
         'keyup', event => this.handleKeyUp(event),
         false
       );
+
     }
 
     handleKeyUp(event) {
