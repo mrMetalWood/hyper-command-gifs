@@ -4,6 +4,8 @@ Plugin for Hyper™ terminal. Fork from Hyper Command GIFs
 
 Enhances your daily terminal routine with GIFs. Because why not.
 
+Displays a gif when opening and when execute some commands
+
 Currently the plugin matches for the following keywords in your commands:
 
 - build
@@ -45,7 +47,9 @@ module.exports = {
 
 
     hyperCommandGifs: {
-      disabledCommands: ['checkout', 'test']
+      disabledCommands: ['checkout', 'test'],
+      gifTimeout: 3000,
+      gifHello: false
     }
   }
 }
