@@ -1,6 +1,6 @@
 {
   "name": "hyper-command-gifs-naay",
-  "version": "2.0.8",
+  "version": "2.9.0",
   "description": "Hyper™ plugin. Gives you matching GIFs for your terminal commands fork from original plugin 'hyper-command-gifs'",
   "main": "index.js",
   "scripts": {

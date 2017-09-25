@@ -1,5 +1,5 @@
-const commands = require('./gifs.js').commands;
-const gifs = require('./gifs.js').gifs;
+let commands = require('./gifs.js').commands;
+let gifs = require('./gifs.js').gifs;
 
 exports.middleware = (store) => (next) => (action) => {
   if ('SESSION_ADD_DATA' === action.type) {
@@ -57,10 +57,6 @@ exports.getTermProps = (uid, parentProps, props) => {
   });
 }
 
-exports.onWindow = (windows ) => {
-  console.log('ceci est un test');
-}
-
 exports.decorateTerm = (Term, { React, notify }) => {
   return class extends React.Component {
     constructor (props, context) {
@@ -70,7 +66,7 @@ exports.decorateTerm = (Term, { React, notify }) => {
 
       this.onTerminal = this.onTerminal.bind(this);
 
-      const defaultConfig = {disabledCommands: [], gifTimeout : 3000, gifHello : true}
+      const defaultConfig = {disabledCommands: [], gifTimeout : 3000, gifHello : true,customGifs:{},deleteDefaultGifs : false}
       const userConfig = config.getConfig().hyperCommandGifs || {};
 
       this.config = Object.assign({}, defaultConfig, userConfig);
@@ -136,14 +132,35 @@ exports.decorateTerm = (Term, { React, notify }) => {
       }
     }
 
+
     clearGif() {
       this.div.style.background = '';
       this.setState({gifInProgress: false});
     }
 
+    addGifs(){
+        for (var prop in this.config.customGifs) {
+            if(gifs[prop] === undefined){
+                gifs[prop] = this.config.customGifs[prop];
+                commands = new RegExp(commands.toString().replace(new RegExp("/", "g"), '')+"|"+prop);
+            }else{
+                gifs[prop] = gifs[prop].concat(this.config.customGifs[prop]);
+            }
+        }
+    }
+
     onTerminal(term) {
       this.div = term.div_;
+
       this.helloGif();
+
+      if(this.config.deleteDefaultGifs){
+          gifs = {};
+          commands = new RegExp();
+      }
+
+      this.addGifs();
+
       term.document_.addEventListener(
         'keyup', event => this.handleKeyUp(event),
         false

@@ -3,11 +3,11 @@ exports.commands = /push|install|clone|pull|start|checkout|test|build|deploy/;
 exports.gifs = {
   hello:[
     'https://media.giphy.com/media/l41lI4bYmcsPJX9Go/giphy.gif', //Rick wubba lubba
-    'https://media.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif',
-    'https://media.giphy.com/media/l4FsCR2hFJnGh18IM/giphy.gif',
-    'https://media.giphy.com/media/l4FGkTtbeWLckSsjC/giphy.gif',
-    'https://media.giphy.com/media/b5Pf9ahPNaiBy/giphy.gif',
-    'https://media.giphy.com/media/hQ5KH1MRgtQ0U/giphy.gif'
+    'https://media.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif', //Ralph
+        'https://media.giphy.com/media/l4FsCR2hFJnGh18IM/giphy.gif', //Computer
+    'https://media.giphy.com/media/l4FGkTtbeWLckSsjC/giphy.gif', //Let's go
+    'https://media.giphy.com/media/hQ5KH1MRgtQ0U/giphy.gif', //Loading
+    'https://media.giphy.com/media/zEjWLt0xZVEoE/giphy.gif' //Windows 95
   ],
   push: [
     'https://media.giphy.com/media/l0NwFpmhycSR8hYdi/200.gif', //Greese
@@ -15,14 +15,14 @@ exports.gifs = {
     'https://media.giphy.com/media/q8IwLQFwKSw4o/giphy.gif', //Karate
     'https://media.giphy.com/media/GTYI31T2gsJxK/giphy.gif', //tower donw
     'https://media.giphy.com/media/3o72FgwyBxqGxxrsRy/giphy.gif', //Foot
-    'https://media.giphy.com/media/PMO6O3mR3AxoY/200.gif' //Chanteuse
+    'https://media.giphy.com/media/PMO6O3mR3AxoY/200.gif' //Singer
   ],
   pull: [
     'https://media.giphy.com/media/Ry9UZHHYucxOw/giphy.gif', //Superwoman
-    'https://media.giphy.com/media/Ao7OKxyaWT9Sw/giphy.gif', //Cheminé
-    'https://media.giphy.com/media/QcLh5dPgMwvlK/giphy.gif', //Bebe berceau
-    'https://media.giphy.com/media/UCK3kL4Tugknu/giphy.gif', //Otarie
-    'https://media.giphy.com/media/aLnQGHQhsvJcY/giphy.gif'  //Bebe rodéo
+    'https://media.giphy.com/media/Ao7OKxyaWT9Sw/giphy.gif', //fireplace
+    'https://media.giphy.com/media/QcLh5dPgMwvlK/giphy.gif', //Babies
+    'https://media.giphy.com/media/UCK3kL4Tugknu/giphy.gif', //fall in water
+    'https://media.giphy.com/media/aLnQGHQhsvJcY/giphy.gif'  //Baby rodéo
   ],
   start: [
     'https://media.giphy.com/media/3aGZA6WLI9Jde/200.gif', //Show boxe
@@ -32,11 +32,11 @@ exports.gifs = {
     'https://media.giphy.com/media/Axqr1hNEmGJiw/giphy.gif' //Start cartoon
   ],
   checkout: [
-    'https://media.giphy.com/media/l0HlSF89is7bCAjte/giphy.gif', //Livre fille
+    'https://media.giphy.com/media/l0HlSF89is7bCAjte/giphy.gif', //woman give a book
     'https://media.giphy.com/media/vZeD7w0QWRnK8/giphy-downsized-large.gif', //Magasin
     'https://media.giphy.com/media/6BRRptFNhQUJG/200.gif', //clin d'oeil
     'https://media.giphy.com/media/3o72Ff1d5HjYhl1Yqs/giphy.gif',  // Check it out
-    'https://media.giphy.com/media/dZUBjx8HIho5i/200.gif'// Check it out
+    'https://media.giphy.com/media/dZUBjx8HIho5i/200.gif'// Check it out 2
   ],
   test: [
     'https://media.giphy.com/media/gw3IWyGkC0rsazTi/200.gif', //print test
