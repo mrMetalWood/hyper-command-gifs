@@ -57,22 +57,6 @@ Default : {}, Usage : {sudo : ["url_to_the_gif","other_url],install : ["one_more
 
 Default : false, ⚠️ if you set at false  and you don't add a custom gif, no gif will be loaded
 
-- gifTimeout : Defining the duration of the gif
-
-Default : 3000
-
-- gifHello : Activate or not the gif when opening Hyper terminal
-
-Default : true
-
-- customGifs : Allow you to add some gifs to default commands and also to add commands
-
-Default : {}, Usage : {sudo : ["url_to_the_gif","other_url],install : ["one_more_gif]"
-
-- deleteDefaultGifs : Removes the original GIF list
-
-Default : false, ⚠️ if you set at true  and you don't add a custom gif, no gif will be loaded
-
 
 Exemple :
 
