@@ -80,6 +80,10 @@ Default : {}, Usage : {sudo : ["url_to_the_gif","other_url],install : ["one_more
 
 Default : false, ⚠️ if you set at false  and you don't add a custom gif, no gif will be loaded
 
+
+Exemple :
+
+
   ```javascript
   module.exports = {
     config: {
@@ -87,10 +91,10 @@ Default : false, ⚠️ if you set at false  and you don't add a custom gif, no 
 
       hyperCommandGifs: {
         disabledCommands: ['checkout', 'test'],
-        gifTimeout: 3000,
+        gifTimeout: 3500,
         gifHello: false,
         deleteDefaultGifs : false,
-        customGifs : {}
+        customGifs : {commit : ["https://media.giphy.com/media/3o85xtLX7zCyeeWGLC/giphy.gif","https://media.giphy.com/media/14sbteMPBcGQUg/giphy.gif"], build : ["https://media.giphy.com/media/3o7TKP9ln2Dr6ze6f6/giphy.gif"]}
       }
   }
   ```
