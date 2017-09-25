@@ -83,7 +83,8 @@ exports.decorateTerm = (Term, { React, notify }) => {
     helloGif(){
 
       if (
-          this.config.gifHello
+          this.config.gifHello &&
+          gifs['hello'] !== undefined
       ){
           const gifCategory = gifs['hello']
           const gifCount = gifCategory.length - 1;
