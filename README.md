@@ -37,13 +37,6 @@ plugins: [
 To configure the plugin simply add a `hyperCommandGifs` property to the config object in `~/.hyper.js`.
 These are the options available :
 
-- disabledCommands : Allow you to disable the gifs for the listed commands
-
-Default : []
-
-To configure the plugin simply add a `hyperCommandGifs` property to the config object in `~/.hyper.js`.
-These are the options available :
-
 - disabledCommands : Allow you to disable the gifs for the listed commands 
 
 Default : []
