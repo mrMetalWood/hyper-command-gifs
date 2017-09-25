@@ -78,7 +78,7 @@ Default : {}, Usage : {sudo : ["url_to_the_gif","other_url],install : ["one_more
 
 - deleteDefaultGifs : Removes the original GIF list
 
-Default : false, ⚠️ if you set at false  and you don't add a custom gif, no gif will be loaded
+Default : false, ⚠️ if you set at true  and you don't add a custom gif, no gif will be loaded
 
 
 Exemple :
