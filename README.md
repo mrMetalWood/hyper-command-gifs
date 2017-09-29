@@ -1,50 +1,77 @@
-# Hyper Command GIFs
+#  Fork from Hyper Command GIFs
 
-Plugin for Hyper™ terminal.
+Plugin for Hyper™ terminal. Fork from [Hyper Command GIFs](https://www.npmjs.com/package/hyper-command-gifs)
 
-Enhances your daily terminal routine with GIFs. Because why not.
+  Enhances your daily terminal routine with GIFs. Because why not.
 
-Currently the plugin matches for the following keywords in your commands:
+  Displays a gif when opening and when execute some commands
 
-- build
-- checkout
-- deploy
-- pull
-- push
-- start
-- test
+  Currently the plugin matches for the following keywords in your commands:
 
-More to come in the next few days!
+  - build
+  - checkout
+  - deploy
+  - pull
+  - push
+  - start
+  - test
+  - install
+  - clone
 
-![Demo of Plugin using git push command](example/git-push-demo.gif)
 
 ## How to use
+![Demo of Plugin using git push command](example/git-push-demo.gif)
 
-Install [Hyper](https://hyper.is) and add `hyper-command-gifs`
+
+## Config
+
+Install [Hyper](https://hyper.is) and add `hyper-command-gifs-naay`
 to `plugins` in `~/.hyper.js`.
 
 ```javascript
 plugins: [
-  'hyper-command-gifs'
+  'hyper-command-gifs-naay'
 ]
 ```
 
-## Config
-
 To configure the plugin simply add a `hyperCommandGifs` property to the config object in `~/.hyper.js`.
-The only option right now is to disable certain commands to prevent them from matching and showing GIFs.
+These are the options available :
 
-Let's say you are switching branches like a maniac and hitting `npm test` every 5 seconds, then just disable them like this:
+- disabledCommands : Allow you to disable the gifs for the listed commands 
 
-```javascript
-module.exports = {
-  config: {
-    // ...all the other default options
+Default : []
+
+- gifTimeout : Defining the duration of the gif
+
+Default : 3000
+
+- gifHello : Activate or not the gif when opening Hyper terminal
+
+Default : true
+
+-customGifs : Allow you to add some gifs to default commands and also to add commands
+
+Default : {}, Usage : {sudo : ["url_to_the_gif","other_url],install : ["one_more_gif]"
+
+- deleteDefaultGifs : Removes the original GIF list
+
+Default : false, ⚠️ if you set at false  and you don't add a custom gif, no gif will be loaded
 
 
-    hyperCommandGifs: {
-      disabledCommands: ['checkout', 'test']
-    }
+Exemple :
+
+
+  ```javascript
+  module.exports = {
+    config: {
+      // ...all the other default options
+
+      hyperCommandGifs: {
+        disabledCommands: ['checkout', 'test'],
+        gifTimeout: 3500,
+        gifHello: false,
+        deleteDefaultGifs : false,
+        customGifs : {commit : ["https://media.giphy.com/media/3o85xtLX7zCyeeWGLC/giphy.gif","https://media.giphy.com/media/14sbteMPBcGQUg/giphy.gif"], build : ["https://media.giphy.com/media/3o7TKP9ln2Dr6ze6f6/giphy.gif"]}
+      }
   }
-}
-```
+  ```
